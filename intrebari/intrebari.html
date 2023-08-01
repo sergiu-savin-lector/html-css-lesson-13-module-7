@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intrebari</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .flex-item {
+        width: 250px;
+        height: 100px;
+        background-color: blue;
+        border: 1px solid black;
+        margin: 10px;
+      }
+
+      .flex-basis {
+       
+        /* flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: calc(1000px / 4); */
+        flex: 1 0 250px;
+        font-size: 32px;
+        font-size: calc(64px / 2);
+      }
+
+      div + p {
+        background-color: red;
+      }
+
+      input[type="text"] {
+        background-color: red;
+      }
+
+      input[placeholder="Aici va fi parola"] {
+        background-color: blue;
+      }
+
+      @media  screen and (max-width: 700px) {
+        .container {
+        flex-direction: column;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <div class="flex-item flex-basis">Test</div>
+      <div class="flex-item"></div>
+      <div class="flex-item"></div>
+    </main>
+    <aside>
+      <p>Inainte de div</p>
+      <div class="test-sibling">Test sibling</div>
+      <p>Primul dupa div</p>
+      <p>Al doilea dupa div</p>
+
+      <form action="">
+        <input type="text" placeholder="Aici va fi text">
+        <input type="password" placeholder="Aici va fi parola">
+        <input type="number" value="3">
+        <input type="submit" value="Submit">
+      </form>
+    </aside>
+  </body>
+</html>
